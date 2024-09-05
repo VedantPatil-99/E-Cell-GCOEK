@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* To ensure scrolling and visibility */
+    background-color: #000; /* Dark background to emphasize the effect */
+}
+
+/* Container for the glowing background */
+.glowing-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh; /* Occupies the top 30-40% of the page */
+    overflow: hidden;
+    z-index: 1;
+    background: 
+      conic-gradient(from -45deg at calc(100%/3) calc(100%/3), #241c32 90deg, #0000 0),
+      conic-gradient(from -135deg at calc(100%/3) calc(2*100%/3), #241c32 90deg, #6747b0 0 135deg, #0000 0),
+      conic-gradient(from 135deg at calc(2*100%/3) calc(2*100%/3), #241c32 90deg, #6747b0 0 135deg, #0000 0),
+      conic-gradient(from 45deg at calc(2*100%/3) calc(100%/3), #241c32 90deg, #6747b0 0 135deg, #0000 0,#241c32 0 225deg,#6747b0 0);
+    background-size: 82px 82px;
+    filter: blur(20px); /* Apply a slight blur */
+}
+
+/* Circular glow effect */
+.circular-glow {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200vw;
+    height: 200vh;
+    background: radial-gradient(circle, rgba(132, 66, 202, 0.6), transparent);
+    filter: blur(20px); /* Blur to create a soft glow */
+    z-index: -100; /* Send it behind the conic gradient */
+}
+
+
+.blob-container{
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 50%;
+    overflow: hidden;
+    z-index: -10; /* Ensures the blobs stay behind the navbar */
+}
+
+.back-blob {
+    position: absolute;
+    height: 30vw;
+    width: 30vw;
+    top: 20%; /* Adjust the position relative to the navbar */
+    left: 10%;
+}
+
+.back-blob:nth-child(2) {
+    filter: blur(1.5rem);
+    /* left: 13%; */ /* Slightly offset the second blob */
+    /* top: 23%; */ /* Adjust as needed to ensure the blobs overlap correctly */
+} 
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .back-blob {
+        height: 50vw; /* Adjust size for smaller screens */
+        width: 50vw;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    .back-blob {
+        height: 65vw; /* Adjust size for larger screens */
+        width: 65vw;
+    }
+}

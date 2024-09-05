@@ -1,0 +1,505 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color) !important;
+}
+
+:root {
+  --bg-color: #08051b;
+  --text-color: #fff;
+  --bg-navbar: #2e2c31a8 /* #2f0042 */;
+  --text-hover-color: #f0e3ff;
+  --hover-color: #8442ca; /* #964EF2 */
+  --bg-box: #120236;
+  --glow: #444444c9;
+}
+
+body {
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ---------- NAVIGATION ---------- */
+/* Make navbar sticky */
+.custom-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-navbar); /* Partially transparent background */
+  backdrop-filter: blur(10px); /* Optional: Adds blur for better effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+.navbar-collapse .nav-item .nav-link {
+  position: relative;
+  margin: 0 1rem 1rem 0;
+  padding-inline: 1.5rem;
+  overflow: hidden; /* Ensure the pseudo element doesn't overflow */
+}
+
+.navbar-collapse .nav-item .nav-link span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-bottom: 2px solid var(--hover-color); /* Underline color */
+  border-radius: 6rem;
+
+  transform: scale(0) translateY(50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.navbar-collapse .nav-item .nav-link:hover span,
+.navbar-collapse .nav-item .nav-link.active span {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  -webkit-box-shadow: inset 0.5px 14px 30.5px -21px #9640ff;
+  -moz-box-shadow: inset 0.5px 14px 30.5px -21px #9640ff;
+  box-shadow: inset 0.5px 14px 30.5px -21px #9640ff;
+}
+
+.navbar-collapse .nav-item .nav-link:hover,
+.navbar-collapse .nav-item .nav-link.active {
+  color: var(--text-hover-color) !important;
+}
+
+/* .custom-navbar {
+  background-color: var(--bg-navbar) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vh;
+  background-color: var(--bg-navbar) !important;
+}
+
+.custom-navbar .menu-toggle .menu-icon .hide {
+    display: none;
+}
+
+.main-pg-title {
+  position: relative;
+  font-size: 3em;
+  left: -12rem;
+}
+
+:is(h1.main-pg-title, span) {
+  font-family: "Vollkorn", serif;
+}
+
+.custom-navbar .list {
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.custom-navbar .list .list-element .navi-links {
+    position: relative;
+    text-decoration: none;
+    text-align: left;
+    margin: 0 .5rem 0 0;
+    padding: 01rem;
+    z-index: 10;
+    transition: 1s;
+    
+}
+
+
+.custom-navbar .list .list-element .navi-links:hover {
+    color: var(--text-hover-color) !important;
+}
+
+.custom-navbar .list .list-element .navi-links:nth-last-child(5) {
+    padding: 0;
+}
+.custom-navbar .list .list-element .navi-links span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    z-index: 1;
+    border-bottom: 2px solid #0ef;
+    border-radius: 10px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.custom-navbar .list .list-element .navi-links:hover span {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.custom-navbar .list .indicator-outline {
+    position: absolute;
+    background-color: var(--bg-navbar);
+    z-index: 1;
+    height: 2rem;
+    width: 5em;
+    top: 2rem;
+    left: 1rem;
+    clip-path: polygon(0% 50%, 100% 50%, 82% 100%, 18% 100%);
+    
+} */
+
+/* .grid {
+    height: 16rem;
+    background-image:
+        linear-gradient(to right, rgb(203 213 225) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(203 213 225) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+    background-position: center center;
+} */
+
+/* .grid-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.grid {
+    height: 20rem;
+    width: 20rem; Size of the grid
+    background-image:
+        linear-gradient(to right, rgb(190 203 213) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(190 203 213) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+    background-position: center center;
+    mask-image: radial-gradient(circle, rgba(255, 255, 255, 1) 40%, rgba(0, 0, 0, 0) 10%);
+    -webkit-mask-image: radial-gradient(circle, rgba(255, 255, 255, 1) 1%, rgba(0, 0, 0, 0) 70%);
+    opacity: 1;
+    transition: 5s;
+}
+ */
+
+/* Background image styling */
+
+/* Hero Section Background */
+.hero-section {
+  background-image: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Default styles for larger screens */
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 2rem 1rem 1rem;
+  position: relative;
+  top: -5%;
+}
+
+.hero-subtitle {
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 2rem 1rem 2rem;
+  /* position: relative; */
+  top: -5%;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  max-width: 50em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0 2rem;
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 991.98px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-description {
+    font-size: 2.25rem;
+  }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .navbar-collapse {
+    font-size: 1rem;
+  }
+}
+
+/* Event card container styling */
+.event-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent; /* Just in case there's a border you want to maintain */
+  border-radius: 10px; /* Adjust to match your card styling */
+  box-shadow: 0 10px 50px rgba(26, 1, 56, 0.93); /* Adjust as needed */
+}
+
+/* Blob effect */
+.blob {
+  position: absolute;
+  bottom: -50%; /* Adjust to fit well with your card layout */
+  left: 50%;
+  width: 150px; /* Adjust size as needed */
+  height: 150px; /* Adjust size as needed */
+  background: radial-gradient(
+    circle at center,
+    rgba(97, 41, 167, 1),
+    transparent 70%
+  );
+  transform: translateX(-50%);
+  filter: blur(30px); /* Adjust blur as needed */
+  z-index: 1; /* Behind other elements */
+}
+
+/* Grid effect */
+.grid {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-image: linear-gradient(
+      to right,
+      rgba(116, 116, 116, 1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to top, rgba(116, 116, 116, 1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  z-index: 2; /* In front of the blob */
+  pointer-events: none; /* Ensure it does not block interactions */
+}
+
+/* Particles container */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Individual particle styling */
+.particle {
+  position: absolute;
+  bottom: 0;
+  width: 2.5px;
+  height: 2.5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  animation: rise 3s infinite;
+  opacity: 0;
+  transform: translateY(0) scale(0.5);
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(-200px) scale(0.51);
+  }
+}
+
+/* About Us Section */
+.about-section {
+  width: 100%;
+  min-height: 30vh; /* Set minimum height to 45% of viewport */
+  background-color: var(--bg-box);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.about-content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-title {
+    font-size: 1.75rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+}
+
+/* Custom styles for the events section */
+.event-section {
+  background-color: var(--bg-color);
+}
+.events-header {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.events-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  margin-bottom: 1.5rem;
+  background-color: var(--bg-box) !important;
+}
+
+.card-title {
+  color: #552591;
+}
+
+.event-card {
+  margin: 1rem 0; /* Adding custom spacing */
+}
+
+.box {
+  position: relative;
+  padding: 1rem;
+  background-color: var(--bg-box);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(26, 1, 56, 0.93);
+}
+
+.card-body {
+  z-index: 4; /* Ensuring content is above the animation */
+}
+
+.gx-4 {
+  --bs-gutter-x: 1.5rem; /* Custom gutter for horizontal spacing */
+}
+
+.gy-5 {
+  --bs-gutter-y: 2rem; /* Custom gutter for vertical spacing */
+}
+
+/* Glassmorphic dropdown */
+.dropdown-menu {
+  background: rgba(255, 255, 255, 0.062);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.dropdown-item:hover {
+  background-color: var(--bg-color);
+}
+/* Toggler button without border and white color */
+.navbar-toggler {
+  border: none; /* Remove border */
+}
+
+.navbar-toggler-icon {
+  background-color: white; /* Set color to white */
+}
+
+
+.team-title {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0 2rem 1rem 1rem;
+  position: relative;
+
+}
+
+.team-description {
+  font-size: 1.5rem;
+  max-width: 50em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0 2rem;
+}
+
+/* Medium screens (Tablets) */
+@media (max-width: 991.98px) {
+  .team-title {
+    font-size: 4rem;
+  }
+
+  .team-description {
+    font-size: 2.25rem;
+  }
+}
+
+/* Small screens (Mobile) */
+@media (max-width: 575.98px) {
+  .team-title {
+    font-size: 1.5rem;
+  }
+
+  .team-description {
+    font-size: 1rem;
+  }
+}

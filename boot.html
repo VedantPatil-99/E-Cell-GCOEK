@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Hero Section (Full-Screen Height) */
+    .hero-section {
+      background-image: url('your-hero-image-url.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    /* About Us Section */
+    .about-section {
+      width: 100%;
+      min-height: 45vh; /* Set minimum height to 45% of viewport */
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 0;
+    }
+
+    .about-content {
+      max-width: 900px;
+      text-align: center;
+    }
+
+    .about-title {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-description {
+      font-size: 1.25rem;
+      line-height: 1.6;
+    }
+
+    /* Media Queries for responsiveness */
+    @media (max-width: 768px) {
+      .about-title {
+        font-size: 2rem;
+      }
+
+      .about-description {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .about-title {
+        font-size: 1.75rem;
+      }
+
+      .about-description {
+        font-size: 1rem;
+      }
+    }
+    
+    /* Custom styles for the events section */
+    .events-header {
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .events-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .event-card {
+      margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+      color: #552591;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-sm bg-body-tertiary custom-navbar">
+    <!-- Your existing navbar code -->
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1 class="hero-title">Welcome to Our Website</h1>
+    <p class="hero-description">Your satisfaction is our priority.</p>
+  </div>
+
+  <!-- About Us Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <h2 class="about-title">About Us</h2>
+      <p class="about-description">
+        We are a team of passionate individuals dedicated to delivering the best service and products. Our goal is to exceed your expectations and build lasting relationships with our clients.
+      </p>
+    </div>
+  </section>
+    <!-- Events Section -->
+  <section class="events-section py-5">
+    <div class="container">
+      <h2 class="events-header">Events</h2>
+      <p class="events-intro">What We Do. E-Cell organises a variety of events throughout the year to promote entrepreneurial activities in and around the campus. Our annual E-Summit witnesses huge participation from all over India. Events like TEDx and StartUp Master Class take the learning to a whole new level. E-Cell also conducts various lectures and workshops focussed at budding entrepreneurs. StartUp Internship Programme helps IITK students land internships in start-ups and get to know their working in greater depth.</p>
+
+      <div class="row">
+        <!-- E-Summit Card -->
+        <div class="col-md-6 col-lg-4 event-card">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">E-Summit</h5>
+              <p class="card-text">E-Summit is an annual flagship event of IIT Kanpur effectuated with the intention to foster entrepreneurial initiatives and activities in the campus to accomplish IIT Kanpur's mandate of nurturing India's future technopreneurs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEDx Card -->
+        <div class="col-md-6 col-lg-4 event-card">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">TEDx</h5>
+              <p class="card-text">TEDx IIT Kanpur is an independent initiative by Entrepreneurship Cell, IIT Kanpur, under the umbrella of TED, to organize versatile an annual talk series from several eminent speakers from the field of Technology, Entertainment and Design.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- UpStart Card -->
+        <div class="col-md-6 col-lg-4 event-card">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">UpStart</h5>
+              <p class="card-text">Upstart stands apart from the conventional Start-up Competition and 10-minute pitching - we strive to give our participants more than just the prize, providing opportunities to develop and hone their business plans.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- StartUp Master Class Card -->
+        <div class="col-md-6 col-lg-4 event-card">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">StartUp Master Class</h5>
+              <p class="card-text">StartUp Master Class is a unique format startup event “for Entrepreneurs, from Entrepreneurs” that brings together startups, mentors, and investors to build interactions and strengthen the entrepreneurial community.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Startup Internship Program Card -->
+        <div class="col-md-6 col-lg-4 event-card">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Startup Internship Program</h5>
+              <p class="card-text">Startup Internship Program 2017-18 saw great success with 151 startups registering. Profiles included IT/Programming, Core, and Marketing/Business Development, with recruitment from startups like Invento Robotics, Ridlr, and Dunzo.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Campus Hangouts Card -->
+        <div class="col-md-6 col-lg-4 event-card">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Campus Hangouts</h5>
+              <p class="card-text">Hangouts is an informal discussion session specifically targeting campus students. It involves brainstorming on entrepreneurship matters with oracles of varied arenas. Multiple sessions are organized throughout the year.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Next Section Placeholder -->
+  <section class="next-section bg-light p-5">
+    <div class="container">
+      <h2 class="text-center">Our Services</h2>
+      <p class="text-center">We offer a range of services to meet your needs.</p>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

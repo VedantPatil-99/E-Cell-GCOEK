@@ -1,0 +1,51 @@
+* {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--text-color) !important;
+}
+
+:root {
+  --bg-color: #230030;
+  --text-color: #fff;
+  --bg-navbar: #2f0042;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.custom-navbar {
+  background-color: var(--bg-navbar) !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vh;
+}
+
+.custom-navbar .menu-toggle .menu-icon .hide {
+    display: none;
+}
+
+.main-pg-title {
+  font-size: 3em;
+}
+
+:is(h1.main-pg-title, span) {
+  font-family: "Vollkorn", serif;
+}
+
+.custom-navbar .list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+
+.custom-navbar .list .list-element .navi-links {
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 1rem;
+}

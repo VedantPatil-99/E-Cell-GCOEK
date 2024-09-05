@@ -1,0 +1,183 @@
+.blob-container {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.back-blob {
+    position: absolute;
+    z-index: -10; /* Ensure it stays behind other elements */
+}
+
+.gallery-img {
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.gallery-img:hover {
+  opacity: 0.8;
+}
+
+/* Applying glassmorphic effect to the modal content */
+.modal-content {
+    background: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(2px); /* For Safari */
+    backdrop-filter: blur(2px); /* Standard */
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 10px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Optional: add some shadow for depth */
+}
+
+/* You can also customize the modal-header and modal-body */
+.modal-header, .modal-body, .modal-footer {
+    background: transparent; /* To ensure they blend into the glassmorphic effect */
+    color: white; /* Change text color for visibility */
+}
+
+/* Ensure the card retains Bootstrap responsiveness */
+.event-card {
+    position: relative;
+    padding: 1rem;
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-box); /* Apply background color */
+    box-shadow: 0 10px 50px rgba(26, 1, 56, 0.93); /* Shadow effect */
+    z-index: 1;
+}
+
+/* Blob effect */
+.blob {
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(circle at center, rgba(97, 41, 167, 1), transparent 70%);
+    transform: translateX(-50%);
+    filter: blur(70px);
+    z-index: 1; /* Behind the grid */
+}
+
+/* Grid effect */
+.grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: 
+      linear-gradient(to right, rgba(116, 116, 116, 1) 1px, transparent 1px),
+      linear-gradient(to top, rgba(116, 116, 116, 1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    mask-image: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.5) 1%, rgba(0, 0, 0, 0) 60%);
+    z-index: 2; /* In front of the blob */
+    pointer-events: none; /* Ensure grid doesn't block interactions */
+}
+
+/* Particles */
+.particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 3; /* In front of the grid */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.particle {
+    position: absolute;
+    bottom: 0;
+    width: 2.5px;
+    height: 2.5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    animation: rise 3s infinite;
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+}
+
+/* Animation keyframes for particle rise */
+@keyframes rise {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(1);
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(-200px) scale(0.51);
+    }
+}
+
+/* Randomizing particle animations */
+.particle:nth-child(1) {
+    animation-delay: 0s;
+    left: 30%;
+}
+.particle:nth-child(2) {
+    animation-delay: 1s;
+    left: 67%;
+}
+/* Continue for other particles... */
+
+
+
+
+
+.glass-border {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .card-img-top {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+  }
+  .team-member-card {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 767.98px) {
+    .card-img-top {
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+
+  .custom-btn {
+    background-color: #8442ca;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .custom-btn:hover {
+    background-color: #6d2c9c;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  .custom-btn:active {
+    background-color: #5c1a7e;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .custom-btn:focus {
+    outline: none;
+  }
